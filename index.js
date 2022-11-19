@@ -26,7 +26,8 @@ for (const file of commandFiles) {
 
 client.once(Events.ClientReady, () => {
 
-	console.log('Ready!');
+	console.log(`${client.tag} is now online`);
+	client.user.setActivity(`Walnut`, { type: 'PLAYING' })
 
 });
 
