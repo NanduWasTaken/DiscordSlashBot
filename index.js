@@ -1,6 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require('discord.js');
 const config = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const token = process.env["TOKEN"]
@@ -18,8 +18,11 @@ for (const file of commandFiles) {
 }
 
 client.once(Events.ClientReady, () => {
-	console.log(`${client.tag} is now online`);
-	client.user.setActivity(`Walnut`, { type: 'PLAYING' })
+	console.log(`${client.user.tag} is now online!`);
+	client.user.setPresence({
+	     activities: [{ name: `Mighty Walnut`, type: ActivityType.Playing }],
+		 status: 'dnd',
+	});
 });
 
 client.on(Events.InteractionCreate, async interaction => {
