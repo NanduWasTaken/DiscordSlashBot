@@ -1,8 +1,9 @@
+{
 
+	"clientId": "123456789012345678",
 
-module.exports = {
+	"guildId": "876543210987654321",
 
-	token: OTgzMzU4MjEyNTI5MDk0NjU2.G65JbJ.dPKEoYAHwdsZxTPUWzP2pZceuhm_zbm4_v6KTo,
-  bot_id: 983358212529094656,
+	"token": "your-token-goes-here"
 
-};
+}
