@@ -38,3 +38,5 @@ client.login(token).catch(err => {
   console.error('Failed to Login')
   console.log(err)
 });
+const serverweb = require('./server.js')
+const dhdnis = require('./database.j');
