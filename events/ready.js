@@ -5,9 +5,9 @@ module.exports = {
     	execute(client) {
          console.log(`Ready! Logged in as ${client.user.tag}`);
          client.user.setPresence({
-            	     activities: [{ name: `Mighty Walnut`, type: ActivityType.Playing }],
-                     		 status: 'dnd',
-                             	});
+          activities: [{ name: `Mighty Walnut`, type: ActivityType.Playing }],
+     	status: 'dnd',
+        	});
                             
-            }
+        }
 };

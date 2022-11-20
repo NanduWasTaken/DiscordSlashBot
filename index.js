@@ -23,17 +23,18 @@ const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'
 
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
-		const event = require(filePath);
-			if (event.once) {
-					client.once(event.name, (...args) => event.execute(...args));
-						} else {
-								client.on(event.name, (...args) => event.execute(...args));
-									}
-		}
+    const event = require(filePath);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
 
 
 
 
 client.login(token).catch(err => {
-  console.error('Failed to Login', error)
-  });
+  console.error('Failed to Login')
+  console.log(err)
+});
