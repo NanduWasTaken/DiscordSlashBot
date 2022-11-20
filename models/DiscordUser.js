@@ -7,5 +7,5 @@ const DiscordUserSchema = new mongoose.Schema({
         avatar: { type: String, required: true }
      });
 
- module.exports = mongoose.model('discord_users', DiscordUserSchema);
+ module.exports = mongoose.model('DiscordUsers', DiscordUserSchema);
 
