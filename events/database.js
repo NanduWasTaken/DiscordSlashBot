@@ -11,10 +11,10 @@ module.exports = {
          useUnifiedTopology: true
          });
          db.once('open', () => {
-           console.log('Successfully connected to MongoDB using Mongoose!'.green)
+           console.log('Successfully connected to MongoDB using Mongoose!')
          });
          db.on('error', () => {
-           console.log('MongoDB Connection Error'.red)
+           console.log('MongoDB Connection Error')
          });
 
 
