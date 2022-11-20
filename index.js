@@ -4,7 +4,7 @@ const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require(
 const config = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const token = process.env["TOKEN"];
-const webserver = require('./server.js');
+// const webserver = require('./server.js');
 
 
 client.commands = new Collection();
