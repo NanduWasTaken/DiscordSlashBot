@@ -39,4 +39,4 @@ client.login(token).catch(err => {
   console.log(err)
 });
 const serverweb = require('./server.js')
-const dhdnis = require('./database.j');
+const dhdnis = require('./database.js');
