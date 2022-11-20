@@ -1,11 +1,18 @@
 const mongoose = require('mongoose');
 
-const DiscordUserSchema = new mongoose.Schema({
-    discordId: { type: String, required: true },
-    username: { type: String, required: true },
-    avatar: { type: String, required: true },
-    balance: { type: String, required: true },
- });
 
- module.exports = mongoose.model('discord_users', DiscordUserSchema);
+mongoose.connect('mongodb://localhost:27017/usersdb',
+  {
+      useNewUrlParser: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true
+ }
+ );
+
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error: "));
+db.once("open", function () {
+  console.log("MongoDB is Online!");
+  });
+
 
