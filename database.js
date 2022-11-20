@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.DPASS,
  {
       useNewUrlParser: true,
-      useFindAndModify: false,
       useUnifiedTopology: true
  }
  );
