@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+var colors = require('colors');
 
 mongoose.connect(process.env.DPASS,
  {
@@ -11,7 +11,7 @@ mongoose.connect(process.env.DPASS,
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
-  console.log("MongoDB is Online!");
+  console.log("MongoDB is Online!".green);
   });
 
 
