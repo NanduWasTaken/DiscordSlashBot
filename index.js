@@ -33,4 +33,7 @@ for (const file of eventFiles) {
 
 
 
-client.login(token);
+
+client.login(token).catch(err => {
+  console.error('Failed to Login', error)
+  });
