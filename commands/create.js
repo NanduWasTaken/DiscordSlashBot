@@ -16,5 +16,6 @@ module.exports = {
          newUser.save().catch(err => {
                  console.error(err)
            })
+           return interaction.reply('created!')
     },
  };
