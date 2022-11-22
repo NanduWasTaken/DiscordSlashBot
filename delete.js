@@ -6,6 +6,6 @@ var colors = require('colors');
 
         // for global commands
 rest.put(Routes.applicationCommands(clientId), { body: [] })
-    .then(() => console.log('Successfully deleted all application commands.'.red))
+    .then(() => console.log('[⚙️] Successfully deleted all application commands.'.red))
     .catch(console.error);
 

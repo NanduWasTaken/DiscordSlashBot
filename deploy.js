@@ -15,12 +15,12 @@ const rest = new REST({ version: '10' }).setToken(token);
 
 (async () => {
 	try {
-	console.log(`Started refreshing ${commands.length} application (/) commands.`.yellow);
+	console.log(`[⚙️] Started refreshing ${commands.length} application (/) commands.`.yellow);
     const data = await rest.put(
 		Routes.applicationCommands(clientId),
 		{ body: commands },
 	);
-	console.log(`Successfully reloaded ${data.length} application (/) commands.`.yellow);
+	console.log(`[⚙️] Successfully reloaded ${data.length} application (/) commands.`.yellow);
 	} catch (error) {
 	console.error(error);
 	}
