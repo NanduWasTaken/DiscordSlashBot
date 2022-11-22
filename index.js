@@ -34,9 +34,6 @@ for (const file of eventFiles) {
 
 
 
-client.login(token).catch(err => {
-  console.error('Failed to Login')
-  console.log(err)
-});
+client.login(token)
 const serverweb = require('./server.js')
 const dhdnis = require('./database.js');

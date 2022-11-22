@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
   })
 
   app.listen(port, () => {
-    console.log(`Webserver is Online`.green)
+    console.log(`Webserver is Online!`.green)
     })
