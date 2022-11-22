@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const DiscordUserSchema = new mongoose.Schema({
-        discordId: { type: String, required: true },
-        username: { type: String, required: true },
-        money: { type: String, required: true },
+const Users = new mongoose.Schema({
+        id: { type: String, unique: true, required: true },
+        tag: { type: String, required: true },
+        date: { type: Date, default: Date.now },
+        bal: { type: Number, required: true }
      });
 
- module.exports = mongoose.model('DiscordUsers', DiscordUserSchema);
+ module.exports = mongoose.model('DiscordUsers', Users);
 
