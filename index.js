@@ -4,7 +4,7 @@ const { Client, Collection, Events, GatewayIntentBits, ActivityType } = require(
 const config = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const token = process.env["TOKEN"];
-// const webserver = require('./server.js');
+
 
 
 client.commands = new Collection();
@@ -35,5 +35,5 @@ for (const file of eventFiles) {
 
 
 client.login(token)
-const serverweb = require('./server.js')
+// const serverweb = require('./server.js')
 const dhdnis = require('./database.js');
