@@ -30,7 +30,7 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
-client.on("debug", console.log)
+// client.on("debug", console.log)
 client.on("warn", console.log)
 
 
