@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const Users = require('../models/DiscordUser.js')
+const DiscordUsers = require('../models/DiscordUser.js')
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -9,7 +9,7 @@ module.exports = {
             const user = interaction;
 
            return user.reply('created!')
-           const newUsers = new Users({
+           const newUsers = new DiscordUsers({
              id: user.id,
              tag: user.tag,
              bal: "1000"
