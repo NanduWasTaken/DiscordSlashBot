@@ -36,5 +36,5 @@ client.on("warn", console.log)
 
 
 client.login(token)
-// const serverweb = require('./server.js')
+const serverweb = require('./server.js')
 const dhdnis = require('./database.js');
